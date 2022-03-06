@@ -1,13 +1,13 @@
 const express = require("express");
 const cors = require("cors");
-// const setupContactRoutes = require("./app/routes/contact.routes");
+const setupContactRoutes = require("./app/routes/contact.routes");
 
 // const { BadRequestError, errorHandler } = require("./app/errors");
 
 //module.exports = handlePromise;
 
 const app = express();
-// setupContactRoutes(app);
+setupContactRoutes(app);
 app.use(cors());
 app.use(express.json());
 app.get("/", (req, res) => {
